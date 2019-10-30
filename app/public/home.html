@@ -7,13 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 
 <body>
     <div class="container">
-        <section class="hero">
+        <section class="hero is-dark">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
@@ -38,12 +43,17 @@
                             </h2>
                         </div>
                         
-                        <a class="button is-primary" href="survey.html">Start Survey</a>
+                        <a class="button is-primary" href="/survey">Start Survey</a>
                     </div>
                 </div>
             </section>
         
     </div>
+    <footer class="footer is-dark">
+        <div class="container">
+              <p><a href="/api/friends">Friends List</a> | <a href="https://github.com/flyboy85749/FriendFinder">GitHub Repo</a></p>
+        </div>
+      </footer>
 </body>
 
 </html>
