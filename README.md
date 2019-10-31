@@ -8,16 +8,16 @@ The purpose of this app is help single people find other single people with simi
 
 ## Screenshots
 
-The home page
+### The home page
 <img src="app\public\images\home.png">
 
-The survey page
+### The survey page
 <img src="app\public\images\survey.png">
 
-The match page
+### The match page
 <img src="app\public\images\match.png">
 
-The list of friends page
+### The list of friends page
 <img src="app\public\images\friends.png">
 
 ## Languages / Frameworks Utilized
