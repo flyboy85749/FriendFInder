@@ -1,5 +1,4 @@
 const express = require("express");
-const exphbs = require("express-handlebars");
 const path = require("path");
 
 // Tells node that we are creating an "express" server
