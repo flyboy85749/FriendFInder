@@ -22,4 +22,4 @@ The purpose of this app is help single people find other single people with simi
 
 ## Languages / Frameworks Utilized
 
-The app uses the express-handlebars templating engine as well as the express server engine.
+The app uses node and express to create a full stack application, using an object instead of a database to hold the friend data
