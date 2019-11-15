@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Friend Finder Survey Page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -25,12 +26,12 @@
           <h2 class="subtitle">Tell Me About You</h2>
           <h3>Your Name: (required)</h3>
           <input type="text" id="name" class="input is-rounded" name="">
-
-          <h3>What Do You Look Like? (upload an image - required)</h3>
-          <form method="POST" action="/submit-form">
-            <input type="file" class="input is-rounded" name="image" />
-            <button type="submit" class="btn btn-primary" name="upload image">Upload Image</button> 
-            </form>
+          <br /><br />
+          <h3>What Do You Look Like? (image link - required)</h3>
+          <!-- <form method="POST" action="/submit-form"> -->
+          <input type="text" class="input is-rounded" name="image" />
+          <!--<button type="submit" class="btn btn-primary" name="upload image">Upload Image</button> 
+            </form> -->
         </div>
       </div>
     </section>
@@ -158,7 +159,7 @@
           <option value="4">4</option>
           <option value="5">5 (Strongly Agree)</option>
         </select>
-      
+
       </div>
     </section>
     <section>
@@ -182,7 +183,7 @@
     <!-- Submit Button -->
     <button type="submit" class="btn button is-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
         aria-hidden="true"></i>
-       Submit</button>
+      Submit</button>
 
     <hr>
     <footer class="footer">
@@ -200,18 +201,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">
-            
+
           </button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
 
         <div class="modal-body">
           <h2 id="matchName"></h2>
-          <img
-            id="matchImg"
-            src="https://via.placeholder.com/400x400"
-            alt="Placeholder image in case user pic doesn't show"
-          />
+          <img id="matchImg" src="https://via.placeholder.com/400x400"
+            alt="Placeholder image in case user pic doesn't show" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -223,13 +221,13 @@
   </div>
 
   <script type="text/javascript">
-    $("#submit").on("click", function() {
+    $("#submit").on("click", function () {
       function validateForm() {
         var isValid = true;
-        $(".form-control").each(function() {
+        $(".form-control").each(function () {
           if ($(this).val() === "") isValid = false;
         });
-        $(".chosen-select").each(function() {
+        $(".chosen-select").each(function () {
           if ($(this).val() === "") isValid = false;
         });
         return isValid;
@@ -252,7 +250,7 @@
           ]
         };
         var currentURL = window.location.origin;
-        $.post(currentURL + "/api/friends", userData, function(data) {
+        $.post(currentURL + "/api/friends", userData, function (data) {
           $("#matchName").text(data.name);
           $("#matchImg").attr("src", data.photo);
           $("#resultsModal").modal("toggle");
@@ -263,9 +261,13 @@
       return false;
     });
   </script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
